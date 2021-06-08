@@ -1,0 +1,24 @@
+{
+  "root": true,
+  "plugins": ["import"],
+  "extends": [
+    "react-app",
+    "react-app/jest"
+  ],
+  "rules": {
+    "import/no-internal-modules": [
+      "error",
+      {
+        "forbid": ["**/modules/*"]
+      }
+    ]
+  },
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [["modules", "./apps/sms/modules"]],
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  }
+}
